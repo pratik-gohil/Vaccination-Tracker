@@ -4,25 +4,54 @@
       "first_name": "Pratik",
       "last_name": "Gohil",
       "email": "pratik@email.com",
-      "password": "$2b$10$cuyG/oNagg/vdJFqbbOCV.tCKHjpMGRMyjxLgyiGSdsAzEQiCtheq",
+      "password": "$2b$10$5J/YyvmRRE3N6SDFQfgnHeJj3wuvUK.EQxtB5SLzRCP2QXIN5/TJu",
       "age": "48",
       "id": 1
+    },
+    {
+      "first_name": "Chirag",
+      "last_name": "Gohil",
+      "email": "chirag@email.com",
+      "password": "$2b$10$Eg8HRdiBJTiEylsJGXM6a.fCwLiFemDthVbRlpbrJ9tH/jv7whNkm",
+      "age": "52",
+      "id": 2
+    },
+    {
+      "first_name": "Geeta",
+      "last_name": "Gohil",
+      "email": "geeta@email.com",
+      "password": "$2b$10$vOMlQWyM9WOQCkb6YZRwK.3Y4lX6/6uGjJLYeqp93u1I7.GFw.0fy",
+      "age": "48",
+      "id": 3
+    },
+    {
+      "first_name": "Sahil",
+      "last_name": "Mantri",
+      "email": "sahil@email.com",
+      "password": "$2b$10$MQmFyJbTnuSlnkfifiRH5uhdR2cbXCnSxQTA2RRgkZDVuuc1Xq6a6",
+      "age": "72",
+      "id": 4
     }
   ],
   "appoinments": [
     {
       "id": "1",
-      "date": "10-02",
+      "date": "10-02-21",
       "description": "first shot"
     },
     {
       "id": "2",
-      "date": "10-03",
+      "date": "10-03-21",
       "description": "second shot"
     },
     {
-      "id": "RHZbGRT",
-      "date": "05-12",
+      "id": "3",
+      "date": "05-09-21",
+      "description": "second shot"
+    },
+        {
+      "id": "3",
+      "date": "05-12-21",
       "description": "third shot"
     }
   ]

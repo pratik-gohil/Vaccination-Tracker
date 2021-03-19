@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 const express = require('express')
 const app = express()
 
@@ -9,12 +11,12 @@ app.use(express.json())
 
 let appoinments;
 
-fetch('http://localhost:3000/appoinments?id=2')
+fetch('http://localhost:3000/appoinments')
 .then(res => res.json())
 .then(data => appoinments = data)
 
-app.get('/appoinments', (req, res) => {
- res.json(appoinments)
+app.get('/appoinments', authenticateToken, (req, res) => {
+ res.json(appoinments.filter(post => post.id == req.user.id))
 })
 
 app.post('/signup', async (req, res) => {
@@ -45,7 +47,9 @@ app.post('/login', async (req, res) => {
 
  try {
   if(await bcrypt.compare(req.body.password, user[0].password)) {
-   res.send('Success')
+   // res.send('Success')
+   const accessToken = jwt.sign(user[0], process.env.ACCESS_TOKEN_SECRET)
+   res.json({accessToken})
   } else {
    res.send('Not Allowed')
   }
@@ -54,5 +58,18 @@ app.post('/login', async (req, res) => {
   res.status(500).send()
  }
 })
+
+function  authenticateToken(req, res, next) {
+ const authHeader = req.headers['authorization']
+ const token = authHeader && authHeader.split(' ')[1]
+
+ if(token == null) return res.status(401)
+
+ jwt.verify(token, process.env.ACCESS_TOKEN_SECRET, (err, user) => {
+  if(err) return res.status(403).send()
+  req.user = user;
+  next()
+ })
+}
 
 app.listen(8080)
