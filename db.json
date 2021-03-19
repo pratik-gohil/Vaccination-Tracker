@@ -1,0 +1,29 @@
+{
+  "users": [
+    {
+      "first_name": "Pratik",
+      "last_name": "Gohil",
+      "email": "pratik@email.com",
+      "password": "$2b$10$cuyG/oNagg/vdJFqbbOCV.tCKHjpMGRMyjxLgyiGSdsAzEQiCtheq",
+      "age": "48",
+      "id": 1
+    }
+  ],
+  "appoinments": [
+    {
+      "id": "1",
+      "date": "10-02",
+      "description": "first shot"
+    },
+    {
+      "id": "2",
+      "date": "10-03",
+      "description": "second shot"
+    },
+    {
+      "id": "RHZbGRT",
+      "date": "05-12",
+      "description": "third shot"
+    }
+  ]
+}
