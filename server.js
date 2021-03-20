@@ -19,8 +19,4 @@ app.use(express.static(__dirname + '/public'));
 
 app.use(authRoutes)
 
-// if(process.env.NODE_ENV === "production") {
-
-// }
-
 app.listen(process.env.PORT || 8080)
