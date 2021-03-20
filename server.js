@@ -9,12 +9,18 @@ const bcrypt = require('bcrypt')
 
 const authRoutes = require("./routes/authRoutes")
 
+const path = require('path')
+
 app.set('view engine', 'ejs')
 
 app.use(express.json())
+app.use(express.static(__dirname + '/public'));
 
-app.use(express.static('public'))
 
 app.use(authRoutes)
 
-app.listen(8080)
+// if(process.env.NODE_ENV === "production") {
+
+// }
+
+app.listen(process.env.PORT || 8080)

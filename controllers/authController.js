@@ -3,6 +3,7 @@ const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
 
 module.exports.home_get = (req, res) => {
+ console.log(req.user)
  res.render('home');
 }
 
@@ -23,7 +24,7 @@ module.exports.signup_post = async (req, res) => {
    headers: {
     'Content-Type': 'application/json'
    },
-   body: JSON.stringify({'first_name': req.body.first_name, 'last_name': req.body.last_name, 'email': req.body.email, 'password': hashedPassword, 'age': req.body.age })
+   body: JSON.stringify({'first_name': req.body.first_name, 'last_name': req.body.last_name, 'email': req.body.email, 'password': hashedPassword, 'birth_date': req.body.birth_date })
   })
   .catch(err => console.log(err))
  } catch(err) {
@@ -32,7 +33,7 @@ module.exports.signup_post = async (req, res) => {
 }
 
 module.exports.login_post = async (req, res) => {
- let user = await fetch(`http://localhost:3000/users?first_name=${req.body.first_name}`)
+ let user = await fetch(`http://localhost:3000/users?email=${req.body.email}`)
  .then(res => res.json())
  .then(data => data)
 
@@ -43,7 +44,9 @@ module.exports.login_post = async (req, res) => {
  try {
   if(await bcrypt.compare(req.body.password, user[0].password)) {
    const accessToken = jwt.sign(user[0], process.env.ACCESS_TOKEN_SECRET)
-   res.json({accessToken})
+   res.cookie('jwt', accessToken)
+   res.locals.islogged = true;
+   res.send(user[0])
   } else {
    res.send('Not Allowed')
   }
@@ -53,11 +56,16 @@ module.exports.login_post = async (req, res) => {
  }
 }
 
+module.exports.logout_get = (req, res) => {
+ res.cookie('jwt', '', {maxAge:1})
+ res.redirect('/')
+}
+
 let appoinments;
 fetch('http://localhost:3000/appoinments')
 .then(res => res.json())
 .then(data => appoinments = data)
 
 module.exports.appoinments = (req, res) => {
- res.json(appoinments.filter(post => post.id == req.user.id))
+ res.render('appointments', {appoinments: appoinments.filter(post => post.id == req.user.id)})
 }

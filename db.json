@@ -5,7 +5,7 @@
       "last_name": "Gohil",
       "email": "pratik@email.com",
       "password": "$2b$10$5J/YyvmRRE3N6SDFQfgnHeJj3wuvUK.EQxtB5SLzRCP2QXIN5/TJu",
-      "age": "48",
+      "birth_date": "1947",
       "id": 1
     },
     {
@@ -13,7 +13,7 @@
       "last_name": "Gohil",
       "email": "chirag@email.com",
       "password": "$2b$10$Eg8HRdiBJTiEylsJGXM6a.fCwLiFemDthVbRlpbrJ9tH/jv7whNkm",
-      "age": "52",
+      "birth_date": "1947",
       "id": 2
     },
     {
@@ -21,7 +21,7 @@
       "last_name": "Gohil",
       "email": "geeta@email.com",
       "password": "$2b$10$vOMlQWyM9WOQCkb6YZRwK.3Y4lX6/6uGjJLYeqp93u1I7.GFw.0fy",
-      "age": "48",
+      "birth_date": "1947",
       "id": 3
     },
     {
@@ -29,8 +29,48 @@
       "last_name": "Mantri",
       "email": "sahil@email.com",
       "password": "$2b$10$MQmFyJbTnuSlnkfifiRH5uhdR2cbXCnSxQTA2RRgkZDVuuc1Xq6a6",
-      "age": "72",
+      "birth_date": "1947",
       "id": 4
+    },
+    {
+      "first_name": "user",
+      "last_name": "test",
+      "email": "user@email.com",
+      "password": "$2b$10$keMFQFrZsC0bDClTPlt2YOAEob6M1mGG5CEx.uWWjLmUQK4r8mfGy",
+      "birth_date": "1947",
+      "id": 5
+    },
+    {
+      "first_name": "user2",
+      "last_name": "test",
+      "email": "user2@email.com",
+      "password": "$2b$10$DUAzWfyuID7d55RfFmxvA.V0g0SPwfPfKyR.pzjulEbjSbI9lkX6K",
+      "birth_date": "2021-03-19",
+      "id": 6
+    },
+    {
+      "first_name": "user3",
+      "last_name": "test",
+      "email": "user3@email.com",
+      "password": "$2b$10$KOMI6GZihnpUB0QgNmuJ7.gh8Eeg/m3OXfX/Az44jBUvbXdYittF2",
+      "birth_date": "2021-03-19",
+      "id": 7
+    },
+    {
+      "first_name": "Pratik",
+      "last_name": "Gohil",
+      "email": "test123@email.com",
+      "password": "$2b$10$T3nzzIve08rFYo0FuhHSiObCe5rk/TcxOnQKPPrfNehUvCt4q5fWK",
+      "birth_date": "2021-03-19",
+      "id": 8
+    },
+    {
+      "first_name": "Pratik",
+      "last_name": "Gohil",
+      "email": "test456@email.com",
+      "password": "$2b$10$lsayomOxSlsxoN2Buh9D4uYErJtEi/nkNBo2ShH2pDq6UJF05c.Hm",
+      "birth_date": "2021-03-20",
+      "id": 9
     }
   ],
   "appoinments": [
@@ -49,10 +89,40 @@
       "date": "05-09-21",
       "description": "second shot"
     },
-        {
+    {
       "id": "3",
       "date": "05-12-21",
       "description": "third shot"
+    },
+    {
+      "id": "5",
+      "date": "05-12-21",
+      "description": "first shot"
+    },
+    {
+      "id": "6",
+      "date": "05-12-21",
+      "description": "test"
+    },
+    {
+      "id": "6",
+      "date": "05-12-21",
+      "description": "test"
+    },
+    {
+      "id": "6",
+      "date": "05-12-21",
+      "description": "test"
+    },
+    {
+      "id": "6",
+      "date": "05-12-21",
+      "description": "test"
+    },
+    {
+      "id": "6",
+      "date": "05-12-21",
+      "description": "test"
     }
   ]
 }

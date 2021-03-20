@@ -1,0 +1,20 @@
+<%- include('partials/header'); -%>
+
+<h1 class="title">appoinments</h1>
+  <table style="width:100%">
+  <tr>
+    <th>id</th>
+    <th>date</th>
+    <th>description</th>
+  </tr>
+<% appoinments.forEach(appoinment => { %>
+  <tr class="table-button">
+    <td><%= appoinment.id %></td>
+    <td><%= appoinment.date %></td>
+    <td><%= appoinment.description %></td>
+    <!-- <button>button</button> -->
+  </tr>
+<% }); %>
+</table>
+
+<%- include('partials/footer'); -%>
